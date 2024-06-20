@@ -3,10 +3,10 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "name": {
-            "value": "Contact Database"
+            "value": "ContactDatabaseIRR"
         },
         "location": {
-            "value": "East US"
+            "value": "eastus2"
         }
     }
 }
