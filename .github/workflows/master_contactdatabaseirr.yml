@@ -18,11 +18,11 @@ jobs:
 
       - name: Build with msbuild
         run: |
-          msbuild /p:Configuration=Release /p:Platform="Any CPU"
+          & "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe" /p:Configuration=Release /p:Platform="Any CPU"
 
       - name: Publish with msbuild
         run: |
-          msbuild /p:Configuration=Release /p:Platform="Any CPU" /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactstagingdirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"
+          & "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe" /p:Configuration=Release /p:Platform="Any CPU" /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactstagingdirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
