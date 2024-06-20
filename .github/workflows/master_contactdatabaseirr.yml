@@ -15,9 +15,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      
+     
       - name: Setup MSBuild
-        uses: warrenbuckley/Setup-MSBuild@v1
+        uses: microsoft/setup-msbuild@v1
         
       - name: Build with msbuild
         run: |
