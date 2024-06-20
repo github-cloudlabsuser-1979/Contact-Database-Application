@@ -18,7 +18,11 @@ jobs:
      
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1
-        
+      
+      - name: Restore NuGet packages
+        run: |
+          nuget restore
+      
       - name: Build with msbuild
         run: |
           & "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe" /p:Configuration=Release /p:Platform="Any CPU"
