@@ -15,7 +15,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
+      
+      - name: Setup MSBuild
+        uses: warrenbuckley/Setup-MSBuild@v1
+        
       - name: Build with msbuild
         run: |
           & "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe" /p:Configuration=Release /p:Platform="Any CPU"
