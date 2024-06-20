@@ -18,6 +18,8 @@ jobs:
      
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1
+        with:
+          dotnet-version: '3.1.x'
       
       - name: Restore NuGet packages
         run: |
