@@ -20,6 +20,9 @@
           ],
           "netFrameworkVersion": "v4.7.2",
           "alwaysOn": true
+        },
+        "repository": {
+          "repoUrl": "https://github.com/github-cloudlabsuser-1979/Contact-Database-Application.git"
         }
       },
       "dependsOn": [
